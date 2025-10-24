@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | VLE English Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-100 flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-blue-800 text-white flex flex-col">
+    <div class="p-6 text-center border-b border-blue-700">
+      <img src="img/Logo.png" alt="VLE English Academy Logo" class="mx-auto w-40 h-40 mb-3">
+    </div>
+    <nav class="flex-1 px-4 py-6 space-y-3 text-sm">
+      <a href="Dashboard.html" class="block py-2 px-3 rounded-md bg-blue-700 font-semibold">Dashboard</a>
+      <a href="courses.html" class="block py-2 px-3 rounded-md hover:bg-blue-700 transition">Khoá học của tôi</a>
+      <a href="#" class="block py-2 px-3 rounded-md hover:bg-blue-700 transition">Quá trình học</a>
+    </nav>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-8 relative">
+      <h2 class="text-2xl font-semibold text-blue-900">Chào mừng trở lại, Dang Duc An!</h2>
+
+      <!-- Profile + Dropdown -->
+      <div class="relative">
+        <button id="profile-btn" class="focus:outline-none">
+          <img src="https://randomuser.me/api/portraits/men/44.jpg" 
+               alt="User Picture" class="w-10 h-10 rounded-full border-2 border-blue-700 cursor-pointer">
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="profile-menu"
+             class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-20">
+          <a href="Profile.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Hồ sơ của tôi</a>
+          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Cài đặt</a>
+          <div class="border-t my-1"></div>
+          <a href="Login Page.html" class="block px-4 py-2 text-red-600 hover:bg-red-50">Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <!-- Stats Cards -->
+    <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-sm text-gray-500 mb-1">Tổng số khoá học</h3>
+        <p class="text-2xl font-semibold text-blue-800">12</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-sm text-gray-500 mb-1">Khoá học đã hoàn thành</h3>
+        <p class="text-2xl font-semibold text-blue-800">25</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-sm text-gray-500 mb-1">Khoá học đang học</h3>
+        <p class="text-2xl font-semibold text-blue-800">3</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-sm text-gray-500 mb-1">Chứng chỉ</h3>
+        <p class="text-2xl font-semibold text-blue-800">4</p>
+      </div>
+    </section>
+
+    <!-- My Courses -->
+    <section>
+      <h3 class="text-xl font-semibold text-blue-900 mb-4">Khoá học của tôi</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5">
+          <img src="https://images.unsplash.com/photo-1584697964190-8a5e9d74b474?auto=format&fit=crop&w=800&q=80"
+               alt="Course" class="rounded-lg mb-4">
+          <h4 class="text-lg font-semibold text-blue-800 mb-1">IELTS Mastery</h4>
+          <p class="text-gray-600 text-sm mb-4">Progress: 100%</p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+          </div>
+          <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Continue</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5">
+          <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9b?auto=format&fit=crop&w=800&q=80"
+               alt="Course" class="rounded-lg mb-4">
+          <h4 class="text-lg font-semibold text-blue-800 mb-1">TOEIC Express</h4>
+          <p class="text-gray-600 text-sm mb-4">Progress: 40%</p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+          </div>
+          <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Continue</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+               alt="Course" class="rounded-lg mb-4">
+          <h4 class="text-lg font-semibold text-blue-800 mb-1">English Conversation</h4>
+          <p class="text-gray-600 text-sm mb-4">Progress: 90%</p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+          </div>
+          <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Continue</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript for Dropdown -->
+  <script>
+    const profileBtn = document.getElementById('profile-btn');
+    const profileMenu = document.getElementById('profile-menu');
+
+    profileBtn.addEventListener('click', () => {
+      profileMenu.classList.toggle('hidden');
+    });
+
+    // Hide the menu when clicking outside
+    window.addEventListener('click', (e) => {
+      if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+        profileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>

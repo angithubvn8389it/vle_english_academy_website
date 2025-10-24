@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Tests | VLE English Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-semibold">VLE English Academy</h1>
+      <nav class="flex items-center space-x-4">
+        <a href="dashboard.html" class="hover:underline">Dashboard</a>
+        <a href="courses.html" class="hover:underline">Courses</a>
+        <a href="practice-tests.html" class="underline font-semibold">Practice Tests</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-6 py-10">
+
+    <!-- Page Title -->
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+      <h2 class="text-3xl font-semibold text-blue-800 mb-4 md:mb-0">Practice Tests</h2>
+
+      <!-- Search Bar -->
+      <div class="flex items-center border border-gray-300 rounded-lg px-3 py-2 bg-white shadow-sm w-full md:w-80">
+        <input type="text" id="searchInput" placeholder="Search tests..."
+          class="flex-grow focus:outline-none text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35M9.5 17A7.5 7.5 0 109.5 2a7.5 7.5 0 000 15z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Test Grid -->
+    <div id="testGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Test Card Template -->
+      <div class="test-card bg-white shadow-lg rounded-xl p-6 border-t-4 border-blue-700 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Grammar Test - Intermediate</h3>
+        <p class="text-gray-600 mb-4">20 questions to test your English grammar skills.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-gray-500">Duration: 15 min</span>
+          <button
+            class="bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Start</button>
+        </div>
+      </div>
+
+      <div class="test-card bg-white shadow-lg rounded-xl p-6 border-t-4 border-green-600 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Vocabulary Challenge</h3>
+        <p class="text-gray-600 mb-4">Expand your English vocabulary with this test.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-gray-500">Duration: 10 min</span>
+          <button
+            class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition">Start</button>
+        </div>
+      </div>
+
+      <div class="test-card bg-white shadow-lg rounded-xl p-6 border-t-4 border-yellow-500 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-yellow-600 mb-2">Reading Comprehension</h3>
+        <p class="text-gray-600 mb-4">Practice your reading and understanding skills.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-gray-500">Duration: 20 min</span>
+          <button
+            class="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">Start</button>
+        </div>
+      </div>
+
+      <div class="test-card bg-white shadow-lg rounded-xl p-6 border-t-4 border-purple-600 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-purple-700 mb-2">Listening Practice</h3>
+        <p class="text-gray-600 mb-4">Listen carefully and answer comprehension questions.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-gray-500">Duration: 25 min</span>
+          <button
+            class="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">Start</button>
+        </div>
+      </div>
+
+      <div class="test-card bg-white shadow-lg rounded-xl p-6 border-t-4 border-red-600 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">Speaking Practice</h3>
+        <p class="text-gray-600 mb-4">Improve your pronunciation and fluency skills.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-sm text-gray-500">Thời gian: 15 phút</span>
+          <button
+            class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition">Start</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-4 text-sm">
+    © 2025 VLE English Academy. All rights reserved.
+  </footer>
+
+  <!-- Script: Search Filter -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const testCards = document.querySelectorAll('.test-card');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      testCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

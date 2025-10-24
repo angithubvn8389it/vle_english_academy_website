@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | VLE English Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-semibold">VLE English Academy</h1>
+      <a href="Dashboard.html" class="bg-white text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition">
+        Back to Dashboard
+      </a>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <main class="flex-grow container mx-auto px-6 py-10">
+    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-3xl mx-auto">
+
+      <!-- Profile Picture -->
+      <div class="flex flex-col items-center mb-8">
+        <div class="relative">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" 
+               class="w-28 h-28 rounded-full border-4 border-blue-700 object-cover">
+          <label class="absolute bottom-0 right-0 bg-blue-700 text-white p-2 rounded-full cursor-pointer hover:bg-blue-800 transition">
+            <input type="file" class="hidden" accept="image/*">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 13h3m4 0h3m-7 4h3m-3 0v-3m0 3V7a2 2 0 012-2h3l4 4v10a2 2 0 01-2 2H9a2 2 0 01-2-2v-1" />
+            </svg>
+          </label>
+        </div>
+        <h2 class="text-2xl font-semibold text-blue-800 mt-4">Dang Duc An</h2>
+        <p class="text-gray-500 text-sm">Student ID: 2025A120</p>
+      </div>
+
+      <!-- Profile Form -->
+      <form class="space-y-6">
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Full Name</label>
+          <input type="text" value="Dang Duc An" 
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Email</label>
+          <input type="email" value="andang32822@yahoo.com" 
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Phone Number</label>
+          <input type="text" value="+84 912 345 678" 
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Bio</label>
+          <textarea rows="3" placeholder="Write something about yourself..."
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">I’m currently studying for my IELTS test and love learning English through movies!</textarea>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <button type="submit"
+                  class="bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-800 transition">
+            Save Changes
+          </button>
+          <button type="submit"
+                  class="bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                  Delete Account
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 text-center text-sm">
+    © 2025 VLE English Academy. All rights reserved.
+  </footer>
+
+</body>
+</html>
