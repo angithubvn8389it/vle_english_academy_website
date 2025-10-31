@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | VLE English Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-100">
+
+<header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+  <h1 class="text-2xl font-semibold">Admin Dashboard</h1>
+  <div class="flex items-center gap-3">
+    <span>🔑 <?php echo $_SESSION['user_name']; ?> (Admin)</span>
+    <form method="POST" action="backend/logout.php">
+      <button class="bg-red-500 px-3 py-1 rounded hover:bg-red-600">Logout</button>
+    </form>
+  </div>
+</header>
+
+<main class="flex-1 p-8">
+  <h2 class="text-xl font-bold mb-4">Course Management</h2>
+  <p>Manage users, create new courses, and monitor student performance.</p>
+</main>
+
+<footer class="bg-gray-200 text-center p-3 mt-auto">
+  <p>&copy; 2025 VLE English Academy</p>
+</footer>
+
+</body>
+</html>
